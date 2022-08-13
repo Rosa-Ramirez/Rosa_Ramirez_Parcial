@@ -4,10 +4,21 @@
  */
 package Class;
 
-/**
- *
- * @author ramir
- */
 public class BookArray {
+    Books[] bookTable;
+    int indexArray;
     
+    public BookArray(){
+        bookTable = new Books[100];
+        this.indexArray = 0;
+    }
+    
+    public void saveBooks(Books book){
+        this.bookTable[this.indexArray] = book;
+        this.indexArray = this.indexArray + 1;
+    }
+    
+    public Books[] getBooks(){
+        return bookTable;
+    }
 }
